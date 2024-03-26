@@ -1,26 +1,89 @@
-create a virtual Environment
-django-admin startproject MyResturant . // . to create in the root folder
-python3 manage.py runserver //run the development server
-python3 manage.py startapp < name> //will create a new app
-python3 manage.py createsuperuser < name> //will create a new user
-python3 manage.py createuser < name> //will create a new user
-python3 manage.py changepassword < username name> //will change the password
-python3 manage.py makemigrations < name> //will create the table migration
-pythone manage.py migrate < name> //will add add in the database
+## Setting Up Django Environment
 
-WSGI webeserver gateway interface gateway //deploying the server to the projection server like apache
-asgi : asynchronous server gateway //deploying the server to the
-urls : Route53 server
+### 1. Create Virtual Environment:
 
-settings : all the configuration settings
+```bash
+python3 -m venv myenv
+source myenv/bin/activate
+```
 
-// Django follow MVT design patter , that is Model view and templated view
-model - data base operations for
-template - user facing templates
-view - middle ware between the template and the model
+### 2. Create Virtual Environment:
 
-// to add the bootstrap we need to Include the CDN to the project serer,
-continiously delivery Network
+```bash
+django-admin startproject MyRestaurant .
+```
 
-psycopg2 to the project to use the sql database
+### 3. To run the development server::
+
+```bash
+python3 manage.py runserver
+```
+
+### 4. To create a new app:
+
+```bash
+python3 manage.py startapp <name>
+```
+
+### 5. To create a superuser:
+
+```bash
+python3 manage.py createsuperuser
+```
+
+### 6. To create a new user:
+
+```bash
+python3 manage.py createuser <name>
+```
+
+### 7. To change a user's password:
+
+```bash
+python3 manage.py changepassword <username>
+```
+
+### 8. To create table migrations:
+
+```bash
+python3 manage.py makemigrations <name>
+```
+
+### 9. To apply migrations to the database:
+
+```bash
+python3 manage.py makemigrations <name>:
+```
+
+### 10. Install psycopg2 for PostgreSQL:
+
+```bash
 pip install psycopg2
+```
+
+### 11. Install python-decouple for managing passwords:
+
+```bash
+pip install python-decouple
+```
+
+## 12. Deploying the project
+
+```bash
+WSGI: Web Server Gateway Interface (e.g., Apache)
+ASGI: Asynchronous Server Gateway Interface
+URLs: Route53 server
+Settings: All configuration settings
+```
+
+## Environments
+
+```bash
+SECRET_KEY=
+# Database configuration settings
+DB_NAME=
+DB_USER=
+DB_PASSWORD=
+DB_HOST=
+ALLOWED_HOST=
+```
