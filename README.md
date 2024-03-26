@@ -21,3 +21,6 @@ view - middle ware between the template and the model
 
 // to add the bootstrap we need to Include the CDN to the project serer,
 continiously delivery Network
+
+psycopg2 to the project to use the sql database
+pip install psycopg2

@@ -76,8 +76,11 @@ WSGI_APPLICATION = 'resturant.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'foodonlinedb',
+        'USER': 'postgres',
+        'PASSWORD': 'Devil@123',
+        'HOST': 'localhost',
     }
 }
 
